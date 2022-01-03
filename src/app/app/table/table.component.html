@@ -1,0 +1,17 @@
+<section class="main">
+	<table>
+		<tr class="top">
+			<td>NAME</td>
+			<td>PRISE</td>
+			<td>EXPIRATION DATE</td>
+			<td>CATEGORY</td>
+		</tr>
+		<tr [ngStyle]="getStyles(i)" *ngFor='let item of arrServiceService.arr; let i = index'>
+			<td>{{item.name}}</td>
+			<td>{{item.prise}}</td>
+			<td>{{item.expirationDate.normalDate}}</td>
+			<td>{{item.category}}</td>
+		</tr>
+	</table>
+</section>
+
